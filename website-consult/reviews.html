@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews | Kian Consult</title>
+  <meta name="description" content="Booked-client reviews and three demo audits for Navigating Uncertainty.">
+  <base href="../">
+  <link rel="stylesheet" href="website-consult/assets/site.css">
+  <script defer src="website-consult/assets/site.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="website-consult/home.html"><span class="mark">Kian</span><span>Consult</span></a>
+      <button class="menu" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="links">
+        <a href="website-consult/home.html">Home</a>
+        <a href="website-consult/strategy.html">Strategy</a>
+        <a class="active" href="website-consult/reviews.html">Reviews</a>
+        <a href="website-consult/book.html">Book</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Reviews</p>
+        <h1>Client feedback and example outputs</h1>
+        <p class="lead">
+          Feedback is added here after client approval. The example audits below show the format of a fixed-scope £800
+          review: one question, a structured evidence trail, clear risks and practical next checks.
+        </p>
+      </div>
+    </section>
+
+    <section class="section band" id="feedback">
+      <div class="container">
+        <div class="review-top">
+          <div>
+            <p class="eyebrow">Client feedback</p>
+            <h2>Reviews from booked work</h2>
+            <p class="lead">
+              Clients can submit feedback after a discovery call, single-question review, full system review or
+              monitoring
+              note. Public reviews are only shown after permission is confirmed.
+            </p>
+          </div>
+          <div class="count" id="reviewCount" aria-live="polite">Reviews pending approval</div>
+        </div>
+
+        <div class="grid two">
+          <div class="scroll" id="reviewList" aria-label="Scrollable review list">
+            <div class="card empty">
+              <h3>Client reviews will appear here</h3>
+              <p>
+                Public feedback is added only after permission. This keeps the page accurate while still giving clients
+                a
+                simple way to submit their review.
+              </p>
+            </div>
+          </div>
+
+          <form class="card" id="reviewForm">
+            <p class="eyebrow">Add a review</p>
+            <h3>Share feedback</h3>
+            <p>
+              This opens an email draft. Your review is not published unless you give permission for it to be shown
+              publicly.
+            </p>
+
+            <label>Name or display name
+              <input name="name" autocomplete="name" required placeholder="Name, initials or anonymous">
+            </label>
+
+            <label>Domain
+              <select name="domain" required>
+                <option>Crypto</option>
+                <option>Property</option>
+                <option>AI infrastructure</option>
+              </select>
+            </label>
+
+            <label>Booked service
+              <select name="service" required>
+                <option>Discovery Call</option>
+                <option>Single Question Review</option>
+                <option>Full System Review</option>
+                <option>Monitoring</option>
+              </select>
+            </label>
+
+            <label>Your review
+              <textarea name="message" required maxlength="700"
+                placeholder="What did you book, what was useful, and what became clearer after the review?"></textarea>
+            </label>
+
+            <button class="primary" type="submit">Submit review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="audits">
+      <div class="container">
+        <div class="heading">
+          <p class="eyebrow">Demo audits</p>
+          <h2>Three single question example audits</h2>
+          <p class="lead">
+            Each demo follows the same pipeline: entity, features, view vectors, LSS, global metrics, temporal drift and
+            a domain dashboard. Values are synthetic and for demonstration only.
+          </p>
+        </div>
+
+        <div class="grid three">
+          <article class="card">
+            <p class="eyebrow">Demo 01 / Crypto</p>
+            <h3>Crypto Multi-View Risk Audit</h3>
+            <p>
+              Tests whether a crypto project still matches its stated category once market, usage, developer,
+              infrastructure and geography views are compared.
+            </p>
+            <span class="tag">taxonomy</span>
+            <span class="tag">bridge exposure</span>
+            <span class="tag">provider drift</span>
+            <div class="buttons">
+              <a class="button primary" href="website-consult/assets/reports/crypto-pipeline-risk-audit.pdf">Open
+                PDF</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="eyebrow">Demo 02 / Property</p>
+            <h3>Property Infrastructure Readiness Audit</h3>
+            <p>
+              Reviews whether a site has real infrastructure-linked optionality or whether the data-centre narrative is
+              moving ahead of grid, fibre and planning evidence.
+            </p>
+            <span class="tag">power</span>
+            <span class="tag">fibre</span>
+            <span class="tag">planning gate</span>
+            <div class="buttons">
+              <a class="button primary"
+                href="website-consult/assets/reports/property-infrastructure-readiness-audit.pdf">Open PDF</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="eyebrow">Demo 03 / AI infrastructure</p>
+            <h3>AI Infrastructure Risk Audit</h3>
+            <p>
+              Tests whether an AI growth story has the compute, data pipeline, deployment and cloud-region base to
+              support the public narrative.
+            </p>
+            <span class="tag">compute</span>
+            <span class="tag">cloud concentration</span>
+            <span class="tag">deployment risk</span>
+            <div class="buttons">
+              <a class="button primary" href="website-consult/assets/reports/ai-infrastructure-risk-audit.pdf">Open
+                PDF</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="buttons">
+          <a class="button primary" href="website-consult/book.html">Book a review</a>
+          <a class="button" href="website-consult/strategy.html">View strategy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Kian</p>
+      <a href="https://info.kian.ltd">Personal Portfolio: info.kian.ltd</a>
+    </div>
+  </footer>
+</body>
+
+</html>
